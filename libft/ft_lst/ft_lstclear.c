@@ -1,12 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils.c                                  :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 13:48:37 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/07/11 19:24:49 by mtritsch         ###   ########.fr       */
+/*   Created: 2022/05/18 11:29:43 by mtritsch          #+#    #+#             */
+/*   Updated: 2022/07/06 15:47:30 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*elem;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		elem = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		(*lst) = elem;
+	}
+	(*lst) = NULL;
+}
