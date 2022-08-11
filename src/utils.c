@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 13:44:44 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/07/11 19:23:48 by mtritsch         ###   ########.fr       */
+/*   Created: 2022/07/06 13:48:37 by mtritsch          #+#    #+#             */
+/*   Updated: 2022/08/04 15:47:24 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	stack_is_sorted(t_stack **a)
+void	no_whitespace(char **s)
 {
-	// while (a)
-	// {
-	// 	if (a->next > a->content)
-	// 		ft_printf("OK\n");
-	// 	else
-	// 		ft_printf("KO\n");
-	// }
-	// return (0);
+	int	x;
+
+	x = 0;
+	while (*s[x])
+	{
+		if (*s[x]== ' ')
+		{
+			x++;
+		}
+		x++;
+	}
 }
