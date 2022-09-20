@@ -6,7 +6,7 @@
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/06 18:15:48 by mtritsch          #+#    #+#              #
-#    Updated: 2022/08/04 19:26:53 by mtritsch         ###   ########.fr        #
+#    Updated: 2022/08/30 15:08:16 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS	= ft_is/ft_isalpha.c ft_is/ft_isascii.c ft_is/ft_isdigit.c ft_is/ft_isalnum
 		ft_mem/ft_bzero.c ft_mem/ft_calloc.c ft_mem/ft_memchr.c ft_mem/ft_memcmp.c ft_mem/ft_memcpy.c ft_mem/ft_memmove.c ft_mem/ft_memset.c \
 		ft_lst/ft_lstadd_back.c ft_lst/ft_lstadd_front.c ft_lst/ft_lstclear.c ft_lst/ft_lstdelone.c ft_lst/ft_lstiter.c ft_lst/ft_lstlast.c ft_lst/ft_lstmap.c ft_lst/ft_lstnew.c ft_lst/ft_lstsize.c \
 		ft_printf/ft_printf.c ft_printf/hexa.c ft_printf/u_int.c ft_printf/ptr.c ft_printf/utils.c \
-		get_next_line/get_next_line.c get_next_line/get_next_line_utils.c \
+		get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 NAME	= libft.a
 OBJS	= ${SRCS:.c=.o}
 CC	= gcc

@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:54:22 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/07/11 19:06:38 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:26:33 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,21 @@ void    swap(t_stack **stack)
 	(*stack)->next = tmp;
 }
 
+void	swap_a(t_stack **a)
+{
+	swap(a);
+	write(1, "sa\n", 3);
+}
+
+void	swap_b(t_stack **b)
+{
+	swap(b);
+	write(1, "sb\n", 3);
+}
+
 void    swap_swap(t_stack **a, t_stack **b)
 {
 	swap(a);
 	swap(b);
+	write(1, "ss\n", 3);
 }

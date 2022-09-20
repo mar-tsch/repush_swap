@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:46:37 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/08/05 16:26:30 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:15:00 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../libft/libft.h"
-# include "../libft/ft_print/ft_printf.h"
+# include "../libft/ft_printf/ft_printf.h"
 
 typedef struct s_stack
 {
     struct	s_stack *next;
-    struct	s-stack	*prev;
+    struct	s_stack	*prev;
     int		*content;
     int		*pos;
 }   t_stack;
@@ -37,8 +37,8 @@ void    push(t_stack **src, t_stack **dest);
 void    push_a(t_stack **a, t_stack **b);
 void    push_b(t_stack **a, t_stack **b);
 void    rotate(t_stack **stack);
-void    rotate_a(t_stack **a, t_stack **b);
-void    rotate_b(t_stack **a, t_stack **b);
+void    rotate_a(t_stack **a);
+void    rotate_b(t_stack **b);
 void    reverse_rotate(t_stack **stack);
 
 /* Displayers */
