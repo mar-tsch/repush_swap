@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:46:37 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/09/21 18:24:00 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:26:17 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int	args_valid(char **args);
 
 /* initialization */
 
-t_stack	build_stack(char **args);
-t_stack	new_stack(int content);
+t_stack	*build_stack(char **args);
+t_stack	*new_stack(int content);
 void	add_to_stack(t_stack **stack, t_stack *new); //ft_lstadd_back ?
 void	order_stack(t_stack *stack);
 void	free_stack(t_stack *stack);

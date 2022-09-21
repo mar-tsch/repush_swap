@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:49:25 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/09/21 18:23:03 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:26:19 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void    free_stack(t_stack *stack)
     }
 }
 
-t_stack new_stack(int content)
+t_stack *new_stack(int content)
 {
     t_stack *result;
 
@@ -64,7 +64,7 @@ t_stack new_stack(int content)
     return (result);
 }
 
-t_stack build_stack(char **args)
+t_stack *build_stack(char **args)
 {
     t_stack *result;
     t_stack *tmp;
