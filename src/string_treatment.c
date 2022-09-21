@@ -6,11 +6,13 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 16:03:29 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/08/05 19:31:48 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:48:42 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/* Check back ft_split */
 
 char	**cust_split(char *s)
 {
@@ -22,6 +24,8 @@ char	**cust_split(char *s)
 	x = 0;
 	len = ft_strlen(s);
 	res = malloc(sizeof(char*) * len);
+	if (!res)
+		return (NULL);
 	while (x < len)
 	{
 		if (s[x] == ' ')

@@ -1,52 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   displayers.c                                       :+:      :+:    :+:   */
+/*   initialization.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 15:30:48 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/09/21 16:42:00 by mtritsch         ###   ########.fr       */
+/*   Created: 2022/09/21 17:49:25 by mtritsch          #+#    #+#             */
+/*   Updated: 2022/09/21 17:59:03 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	putchar(char c)
+void    order_stack(t_stack *stack)
 {
-	write(1, "&c", 1);
+    //stuff
 }
 
-void	putstr(char *s)
+void    add_to_stack(t_stack **stack, t_stack *new)
 {
-	while (*s++)
-		putchar(*s);
+    //stuff
 }
 
-void	err_putchar(char c)
+void    free_stack(t_stack *stack)
 {
-	write(2, "&c", 1);
+    //stuff
 }
 
-void	err_putstr(char *s)
+t_stack build_stack(char **args)
 {
-	while (*s++)
-		err_putchar(*s);
+    //stuff
 }
 
-void	print_stack(t_stack *stack)
+t_stack new_stack(int content)
 {
-	char	*x;
-
-	while (stack)
-	{
-		x = ft_itoa(stack->pos);
-		putstr(x);
-		free(x);
-		putstr(" | ");
-		x = ft_itoa(stack->content);
-		putstr(x);
-		free(x);
-		stack = stack->next;
-	}
+    //stuff
 }
