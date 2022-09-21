@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:46:37 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/09/21 17:55:48 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:24:00 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	print_stack(t_stack *stack);
 
 /* String treatment */
 
-char	**cust_split(char *s);
+char	**cust_split(char *s); // just ft_split ?
 
 
 /* Check args */
@@ -72,7 +72,7 @@ int	args_valid(char **args);
 
 t_stack	build_stack(char **args);
 t_stack	new_stack(int content);
-void	add_to_stack(t_stack **stack, t_stack *new);
+void	add_to_stack(t_stack **stack, t_stack *new); //ft_lstadd_back ?
 void	order_stack(t_stack *stack);
 void	free_stack(t_stack *stack);
 
