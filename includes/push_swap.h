@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:46:37 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/09/21 18:26:17 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/09/22 21:06:32 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,23 @@ void	free_stack(t_stack *stack);
 
 /* utils */
 int whitespace_finder(char c);
+
+/* solving */
+
+int	solve_two(t_stack **stack);
+int	solve_three(t_stack **stack);
+int	solve_five(t_stack **stack);
+
+/* utils for solving */
+
+int	stack_solved(t_stack *stack);
+int	rotation_calcul(t_stack *stack, int pos);
+int	rev_rotation_calcul(t_stack *stack, int pos);
+size_t	len_of_stack(t_stack *stack);
+int	order_top(t_stack *stack);
+int	order_bot(t_stack *stack);
+int	index_top(t_stack *stack, int min, int max);
+int	index_bot(t_stack *stack, int min, int max);
+t_stack	*stack_index(t_stack *stack, int index);
 
 #endif
