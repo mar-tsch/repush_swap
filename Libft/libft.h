@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 16:22:55 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/05/17 12:15:28 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:47:35 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ size_t	ft_strlen(const char *s);
 
 typedef struct s_list
 {
-	void			*content;
+	int	content;
+	int	pos;
+	int	most_effic;
 	struct s_list	*next;
 }	t_list;
 t_list	*ft_lstnew(void *content);

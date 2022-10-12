@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 18:31:18 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:43:07 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 # define RRR 11
 /*macro for movements*/
 
-typedef	struct	s_caracs {
+typedef	struct	s_carac {
 		int	min;
 		int	max;
 		int	mid;
@@ -38,7 +38,7 @@ typedef	struct	s_caracs {
 		int	himid;
 		int	pos_lomid;
 		int	idx;
-}		t_caracs;
+}		t_carac;
 
 		/*moves functions*/
 
@@ -58,9 +58,16 @@ void	error(void);
 
 		/*error checkers*/
 
+void	arg_not_int(char **av);
+void	arg_is_int_max(char **av);
+void	arg_twice(char **av);
+void	check_args(char **av);
+int		stack_is_sorted(t_list *stack_a, t_list *stack_b);
+
 		/*little algo fuctions*/
 
 		/*bigger algo functions*/
 
 		/*lezgo functions*/
+
 #endif
