@@ -5,41 +5,44 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/06 13:42:02 by mtritsch          #+#    #+#              #
-#    Updated: 2022/08/30 15:21:31 by mtritsch         ###   ########.fr        #
+#    Created: 2022/10/12 15:01:22 by mtritsch          #+#    #+#              #
+#    Updated: 2022/10/12 15:13:32 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= src/ main.c push_swap.c pushes.c rotates.c swaps.c utils.c reverse_rotates.c \
-OBJS	= $(SRCS:.c=.o)
-NAME	= push_swap 
+SRCS	= src/
+OBJS	= ${SRCS:.c=.o}
+NAME	= push_swap
 LIBFT	= libft/
-CC 	= gcc
-CFLAGS	= -Wall -Wextra -Werror
+CC	= gcc
+CFLAGS	= -Wall -Werror -Wextra
 RM	= rm -f
 AR	= ar -rc
 
-${NAME} : ${OBJS}
+${NAME}	:
+	${OBJS}
 	@make -C ${LIBFT}
-	@cp ${LIBFT}/libft.a .
+	@cp ${LIBFT}/libft.a
 	@mv libft.a ${NAME}
 	${AR} ${NAME} ${OBJS}
 
-.c.o :
+.c.o	:
 	@echo "Compiling..."
-	${CC} ${CFLAGS} -c $< -o ${@%.c.o}
-	@echo "Compilation successful"
+	${CC} ${CFLAGS} -c $< -o ${a%.c.o}
+	@echo "Compilation successful !"
 
-all :	$(NAME)
+all	:
+	${NAME}
 
-clean :
+clean	:
 	${RM} ${OBJS}
 	@make clean -C ${LIBFT}
-	@echo "Clean successful"
+	@echo "All cleaned !"
 
-fclean : clean
+fclean	:
 	${RM} ${NAME}
 	${RM} ${LIBFT}/libft.a
-	@echo "Fclean successful"
+	@echo "All fcleaned ! <3"
 
-re : fclean all
+re	:
+	fclean all

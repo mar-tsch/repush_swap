@@ -5,96 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 13:46:37 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/09/22 21:06:32 by mtritsch         ###   ########.fr       */
+/*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
+/*   Updated: 2022/10/12 15:22:55 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
+#ifndef
+# define "PUSH_SWAP_H"
 # include <stdlib.h>
 # include <unistd.h>
 # include "../libft/libft.h"
-# include "../libft/ft_printf/ft_printf.h"
 
-typedef struct s_stack
-{
-    struct	s_stack *next;
-    struct	s_stack	*prev;
-    int		*content;
-    int		*pos;
-}   t_stack;
+# define
+/*macro for movements*/
 
+		/*moves functions*/
 
-void    stack_is_sorted(t_stack **a);
+		/*Displayers*/
 
-/* Moves functions */
+		/*little algo fuctions*/
 
-void    swap(t_stack **stack);
-void    swap_a(t_stack **a);
-void    swap_b(t_stack **b);
-void    swap_swap(t_stack **a, t_stack **b);
-void    push(t_stack **src, t_stack **dest);
-void    push_a(t_stack **a, t_stack **b);
-void    push_b(t_stack **a, t_stack **b);
-void    rotate(t_stack **stack);
-void    rotate_a(t_stack **a);
-void    rotate_b(t_stack **b);
-void    rotate_rotate(t_stack **a, t_stack **b);
-void    reverse_rot(t_stack **stack);
-void    reverse_rot_a(t_stack **a);
-void    reverse_rot_b(t_stack **b);
-void    reverse_rot_rot(t_stack **a, t_stack **b);
+		/*bigger algo functions*/
 
-/* Displayers */
-
-void	putchar(char c);
-void	putstr(char *s);
-void	err_putchar(char c);
-void	err_putstr(char *s);
-void	print_stack(t_stack *stack);
-
-/* String treatment */
-
-char	**cust_split(char *s); // just ft_split ?
-
-
-/* Check args */
-
-int	args_int_ok(char **args);
-int	args_twice(char **args);
-int atoi_long(char *s);
-int	args_size(char **args);
-int	args_valid(char **args);
-
-/* initialization */
-
-t_stack	*build_stack(char **args);
-t_stack	*new_stack(int content);
-void	add_to_stack(t_stack **stack, t_stack *new); //ft_lstadd_back ?
-void	order_stack(t_stack *stack);
-void	free_stack(t_stack *stack);
-
-/* utils */
-int whitespace_finder(char c);
-
-/* solving */
-
-int	solve_two(t_stack **stack);
-int	solve_three(t_stack **stack);
-int	solve_five(t_stack **stack);
-
-/* utils for solving */
-
-int	stack_solved(t_stack *stack);
-int	rotation_calcul(t_stack *stack, int pos);
-int	rev_rotation_calcul(t_stack *stack, int pos);
-size_t	len_of_stack(t_stack *stack);
-int	order_top(t_stack *stack);
-int	order_bot(t_stack *stack);
-int	index_top(t_stack *stack, int min, int max);
-int	index_bot(t_stack *stack, int min, int max);
-t_stack	*stack_index(t_stack *stack, int index);
-
+		/*lezgo functions*/
 #endif
