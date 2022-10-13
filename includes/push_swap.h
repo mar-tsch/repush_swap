@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/13 17:17:38 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/13 18:12:55 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,13 @@ void	arg_is_int_max(char **av);
 void	arg_twice(char **av);
 void	check_args(char **av);
 int		stack_is_sorted(t_list *stack_a, t_list *stack_b);
+
+		/*caracs defining functions*/
+
+void	is_min_or_max(t_list **stack_a, t_carac *carac);
+void	build_tab(t_list **stack_a, int *tab, int size);
+void	find_mid_and_co(int *tab, int size, t_carac *carac);
+void	set_caracs(t_list **stack_a, t_carac *carac);
 
 		/*smol algo fuctions*/
 
