@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:48:07 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 18:20:15 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/13 17:03:55 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ void	display_move(int mvmnt)
 void	error_detected(void)
 {
 	write(2, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }

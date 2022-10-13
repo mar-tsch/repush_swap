@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 19:43:07 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/13 17:17:38 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,17 @@ void	arg_twice(char **av);
 void	check_args(char **av);
 int		stack_is_sorted(t_list *stack_a, t_list *stack_b);
 
-		/*little algo fuctions*/
+		/*smol algo fuctions*/
+
+void	two_num(t_list *stack_a);
+void	three_num(t_list *stack_a);
+void	three_num_bwrds(t_list *stack_b);
+void	five_num(t_list **stack_a, t_list **stack_b, t_carac *carac);
 
 		/*bigger algo functions*/
 
 		/*lezgo functions*/
+
+void	stack_initialize(char **av, t_list **stack_a);
 
 #endif

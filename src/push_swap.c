@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:32:27 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 19:40:26 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/13 17:03:25 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	stack_is_sorted(t_list *stack_a, t_list *stack_b)
 {
 	if (ft_lstsize(stack_b) != 0)
-		return (1);
+		return (0);
 	while (stack_a->next)
 	{
 		if (stack_a->content > stack_a->next->content)
@@ -23,6 +23,23 @@ int	stack_is_sorted(t_list *stack_a, t_list *stack_b)
 		stack_a = stack_a->next;
 	}
 	return (1);
+}
+
+void	stack_initialize(char **av, t_list **stack_a)
+{
+	int	x;
+	int	elem;
+	t_list	*head;
+
+	x = 1;
+	head = *stack_a;
+	while (av[x])
+	{
+		elem = ft_atoi(av[x]);
+		head = ft_lstnew(elem);
+		ft_lstadd_back(stack_a, head);
+		x++;
+	}
 }
 
 int	main(int ac, char **av)
@@ -34,8 +51,9 @@ int	main(int ac, char **av)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac < 2)
-		return (NULL);
+		exit(EXIT_FAILURE);;
 	check_args(av);
+	stack_intialize(av, &stack_a);
 	/*more to come*/
 	return (0);
 }
