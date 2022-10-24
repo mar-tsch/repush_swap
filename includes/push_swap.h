@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/13 18:12:55 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:33:25 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,14 @@ void	three_num_bwrds(t_list *stack_b);
 void	five_num(t_list **stack_a, t_list **stack_b, t_carac *carac);
 
 		/*bigger algo functions*/
+
+		/*utils mostly for chonky algo*/
+
+int		be_positive(int x);
+int		ok_stack_a(t_list *tmp_a, t_list *tmp_b);
+int		ok_general(t_list **stack_a, t_list **stack_b, t_list *last);
+void	best_stack_a(t_list **stack_a, t_list **tmp_a, t_list **tmp_b);
+void	best_one(t_list **stack_a, t_list **stack_b, int *best);
 
 		/*lezgo functions*/
 
