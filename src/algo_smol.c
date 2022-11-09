@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:47:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/13 15:58:30 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:24:17 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,8 @@ void	five_num(t_list **stack_a, t_list **stack_b, t_cararc *carac)
 {
 	while ((*stack_a)->next->next)
 	{
-		if ((*stack_a)->content == carac->min || (*stack_a)->content == carac->max)
+		if ((*stack_a)->content == carac->min
+			|| (*stack_a)->content == carac->max)
 			rotate(*stack_a, RA);
 		else
 			stack_push(stack_b, stack_a, PB);
@@ -90,5 +91,5 @@ void	five_num(t_list **stack_a, t_list **stack_b, t_cararc *carac)
 	while (*stack_b)
 		stack_push(stack_a, stack_b, PA);
 	reverse_rotate(*stack_a, RRA);
-	//place_right_spot(stack_a, stack_b, carac;
+	slide_in_place(stack_a, stack_b, carac);
 }

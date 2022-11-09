@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:12:17 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/18 15:30:08 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:25:04 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	be_positive(int x)
 
 int	ok_stack_a(t_list *tmp_a, t_list *tmp_b)
 {
-	if (tmp_b->content > tmp_a->content && tmp_b->content < tmp_a->next->content)
+	if (tmp_b->content > tmp_a->content
+		&& tmp_b->content < tmp_a->next->content)
 		return (1);
 	else
 		return (0);
@@ -30,7 +31,8 @@ int	ok_stack_a(t_list *tmp_a, t_list *tmp_b)
 
 int	ok_general(t_list **stack_a, t_list **stack_b, t_list *last)
 {
-	if ((*stack_b)->content > last->content && (*stack_b)->content < (*stack_a)->content)
+	if ((*stack_b)->content > last->content
+		&& (*stack_b)->content < (*stack_a)->content)
 		return (1);
 	else
 		return (0);

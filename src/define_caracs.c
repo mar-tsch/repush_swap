@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 17:31:13 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/13 18:11:00 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:36:19 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	is_min_or_max(t_list **stack_a, t_carac *carac)
 {
-	int	min;
-	int	max;
 	t_list	*tmp;
+	int		min;
+	int		max;
 
 	tmp = *stack_a;
 	min = (*stack_a)->content;
@@ -35,8 +35,8 @@ void	is_min_or_max(t_list **stack_a, t_carac *carac)
 
 void	build_tab(t_list **stack_a, int *tab, int size)
 {
-	int	x;
 	t_list	*tmp;
+	int		x;
 
 	x = 0;
 	tmp = *stack_a;
@@ -78,10 +78,10 @@ void	find_mid_and_co(int *tab, int size, t_carac *carac)
 
 void	set_caracs(t_list **stack_a, t_carac *carac)
 {
-	int	*tab;
-	int	x;
-	int	size;
 	t_list	*tmp;
+	int		*tab;
+	int		x;
+	int		size;
 
 	x = 0;
 	tmp = *stack_a;

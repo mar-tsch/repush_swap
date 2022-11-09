@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:14:21 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 18:23:17 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:27:20 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	rotate(t_list *stack, int mv)
 
 	elem = stack;
 	elem1 = stack->next;
-	while(elem1)
+	while (elem1)
 	{
 		swap(&elem->content, &elem1->content);
 		elem = elem->next;
