@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:47:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/09 18:24:17 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:26:23 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	three_num_bwrds(t_list *stack_b)
 	}
 }
 
-void	five_num(t_list **stack_a, t_list **stack_b, t_cararc *carac)
+void	five_num(t_list **stack_a, t_list **stack_b, t_carac *carac)
 {
 	while ((*stack_a)->next->next)
 	{

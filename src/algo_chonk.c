@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:53:29 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/09 18:33:42 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:26:05 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	start_sorting(t_list **stack_a, t_list **stack_b, t_carac *carac)
 		else if ((*stack_a)->content < carac->lomid && carac->pos_lomid > 0)
 		{
 			rotate(*stack_a, RA);
-			carc->pos_lomid--;
+			carac->pos_lomid--;
 		}
 		else if ((*stack_a)->content < carac->himid)
 			stack_push(stack_b, stack_a, PB);
@@ -61,7 +61,7 @@ void	best_possible_move(t_list **stack_a, t_list **stack_b)
 		(*stack_b)->pos++;
 		tmp_b = tmp_b->next;
 	}
-	//place_deez(stack_a, stack_b);
+	place_deez(stack_a, stack_b);
 }
 
 void	slide_in_place(t_list **stack_a, t_list **stack_b, t_carac *carac)
@@ -95,7 +95,7 @@ void	algo_chonk(t_list **stack_a, t_list **stack_b, t_carac *carac)
 	t_list	*last_one;
 
 	last_one = ft_lstlast(*stack_a);
-	stack_initialize(stack_a, stack_b, carac);
+	start_sorting(stack_a, stack_b, carac);
 	while (*stack_b && !stack_is_sorted(*stack_a, *stack_b))
 	{
 		last_one = ft_lstlast(*stack_a);

@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:32:27 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/13 17:26:40 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:30:42 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	stack_is_sorted(t_list *stack_a, t_list *stack_b)
 
 void	stack_initialize(char **av, t_list **stack_a)
 {
-	int	x;
-	int	elem;
 	t_list	*head;
+	int		x;
+	int		elem;
 
 	x = 1;
 	head = *stack_a;
@@ -51,7 +51,7 @@ void	select_operation(t_list **stack_a, t_list **stack_b, t_carac *carac)
 	else if (ft_lstsize(*stack_a) == 5)
 		five_num(stack_a, stack_b, carac);
 	else
-		/*more to come*/
+		algo_chonk(stack_a, stack_b, carac);
 }
 
 int	main(int ac, char **av)
@@ -63,9 +63,12 @@ int	main(int ac, char **av)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac < 2)
-		exit(EXIT_FAILURE);;
+		exit(EXIT_FAILURE);
 	check_args(av);
 	stack_intialize(av, &stack_a);
-	/*more to come*/
+	set_caracs(&stack_a, &carac);
+	if (!stack_is_sorted(stack_a, stack_b))
+		select_operation(&stack_a, &stack_b, &carac);
+	ft_lstclear(&stack_a, free);
 	return (0);
 }

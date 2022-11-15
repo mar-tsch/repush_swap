@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:12:17 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/09 18:25:04 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:27:43 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	best_stack_a(t_list **stack_a, t_list **tmp_a, t_list **tmp_b)
 
 void	best_one(t_list **stack_a, t_list **stack_b, int *best)
 {
-	*best = be_positive((*satck_a)->pos) + be_positive((*stack_b)->pos);
+	*best = be_positive((*stack_a)->pos) + be_positive((*stack_b)->pos);
 	(*stack_b)->most_effic = (*stack_b)->pos;
 	(*stack_a)->most_effic = (*stack_a)->pos;
 }

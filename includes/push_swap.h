@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/09 18:21:18 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:29:59 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@
 # define RRR 11
 /*macro for movements*/
 
-typedef	struct	s_carac {
-		int	min;
-		int	max;
-		int	mid;
-		int	lomid;
-		int	himid;
-		int	pos_lomid;
-		int	idx;
+typedef struct s_carac {
+	int	min;
+	int	max;
+	int	mid;
+	int	lomid;
+	int	himid;
+	int	pos_lomid;
+	int	idx;
 }		t_carac;
 
 		/*moves functions*/
@@ -73,6 +73,12 @@ void	set_caracs(t_list **stack_a, t_carac *carac);
 
 		/*stack organization*/
 
+void	stacks_up(t_list **stack_a, t_list **stack_b);
+void	stacks_down(t_list **stack_a, t_list **stack_b);
+void	one_up(t_list **stack, char c);
+void	one_down(t_list **stack, char c);
+void	place_deez(t_list **stack_a, t_list **stack_b);
+
 		/*smol algo fuctions*/
 
 void	two_num(t_list *stack_a);
@@ -85,7 +91,7 @@ void	five_num(t_list **stack_a, t_list **stack_b, t_carac *carac);
 void	start_sorting(t_list **stack_a, t_list **stack_b, t_carac *carac);
 void	best_possible_move(t_list **stack_a, t_list **stack_b);
 void	slide_in_place(t_list **stack_a, t_list **stack_b, t_carac *carac);
-void	algo_chonk(t_list **stack_a, t_list **stack_b, t_carac *carac)
+void	algo_chonk(t_list **stack_a, t_list **stack_b, t_carac *carac);
 
 		/*utils mostly for chonky algo*/
 
@@ -98,5 +104,6 @@ void	best_one(t_list **stack_a, t_list **stack_b, int *best);
 		/*lezgo functions*/
 
 void	stack_initialize(char **av, t_list **stack_a);
+void	select_operation(t_list **stack_a, t_list **stack_b, t_carac *carac);
 
 #endif

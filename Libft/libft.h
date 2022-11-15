@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 16:22:55 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 19:47:35 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/15 18:31:27 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	int				content;
+	int				pos;
+	int				most_effic;
+	struct s_list	*next;
+}	t_list;
 
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -51,14 +59,6 @@ char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
-
-typedef struct s_list
-{
-	int	content;
-	int	pos;
-	int	most_effic;
-	struct s_list	*next;
-}	t_list;
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
