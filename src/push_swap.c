@@ -6,11 +6,11 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:32:27 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/15 18:30:42 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/16 19:18:06 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int	stack_is_sorted(t_list *stack_a, t_list *stack_b)
 {
@@ -65,7 +65,7 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		exit(EXIT_FAILURE);
 	check_args(av);
-	stack_intialize(av, &stack_a);
+	stack_initialize(av, &stack_a);
 	set_caracs(&stack_a, &carac);
 	if (!stack_is_sorted(stack_a, stack_b))
 		select_operation(&stack_a, &stack_b, &carac);

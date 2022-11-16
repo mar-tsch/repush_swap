@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:53:29 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/15 18:26:05 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/16 19:28:13 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	slide_in_place(t_list **stack_a, t_list **stack_b, t_carac *carac)
 		mid_place++;
 		tmp = tmp->next;
 	}
-	while (!stack_sorted(*stack_a, *stack_b))
+	while (!stack_is_sorted(*stack_a, *stack_b))
 	{
 		if (min_place < mid_place)
 			rotate(*stack_a, RA);

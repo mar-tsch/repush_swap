@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 17:31:13 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/09 18:36:19 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/16 19:30:39 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	find_mid_and_co(int *tab, int size, t_carac *carac)
 		while (b < size)
 		{
 			if (tab[a] < tab[b])
-				ft_swap(&tab[a], &tab[b]);
+				swap(&tab[a], &tab[b]);
 			b++;
 		}
 		a++;
@@ -95,7 +95,7 @@ void	set_caracs(t_list **stack_a, t_carac *carac)
 		x++;
 		tmp = tmp->next;
 	}
-	is_min_ormax(stack_a, carac);
+	is_min_or_max(stack_a, carac);
 	build_tab(stack_a, tab, size);
 	find_mid_and_co(tab, size, carac);
 	free(tab);

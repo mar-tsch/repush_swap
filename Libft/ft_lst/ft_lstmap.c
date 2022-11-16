@@ -6,13 +6,13 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:51:15 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/07/06 15:47:30 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/16 19:41:20 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(int), void (*del)(int))
 {
 	t_list	*new;
 	t_list	*newlst;
