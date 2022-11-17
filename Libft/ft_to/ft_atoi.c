@@ -6,11 +6,11 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 15:13:06 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/16 19:35:21 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:28:56 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../includes/libft.h"
 
 long long int	ft_atoi(const char *str)
 {

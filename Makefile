@@ -6,7 +6,7 @@
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 15:01:22 by mtritsch          #+#    #+#              #
-#    Updated: 2022/11/16 20:03:04 by mtritsch         ###   ########.fr        #
+#    Updated: 2022/11/17 14:34:09 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ SRCS = 	src/push_swap.c\
 		src/utils.c
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap
-LIBFT = Libft/
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
@@ -30,24 +29,21 @@ AR = ar -rc
 
 all : ${NAME}
 
-${NAME}	: ${OBJS}
-	@make -C ${LIBFT}
-	@cp ${LIBFT}libft.a .
-	${CC} ${OBJS} libft.a -o ${NAME}
+${NAME}	: Libft/libft.a ${OBJS}
+	${CC} ${CFLAGS} ${OBJS} -L Libft -lft -o ${NAME}
 
-.c.o :
-	@echo "Compiling..."
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
-	@echo "Compilation successful !"
+Libft/libft.a :
+	make -C Libft
 
 clean :
 	${RM} ${OBJS}
-	@make clean -C ${LIBFT}
+	@make clean -C Libft
 	@echo "All cleaned !"
 
 fclean :
 	${RM} ${NAME}
-	${RM} ${LIBFT}/libft.a
+	${RM} libft.a
+	@make fclean -C Libft
 	@echo "All fcleaned ! <3"
 
 re : fclean all

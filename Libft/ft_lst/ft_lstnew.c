@@ -6,11 +6,11 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 12:05:41 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/16 19:23:01 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:28:56 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../../includes/libft.h"
 
 t_list	*ft_lstnew(int content)
 {
