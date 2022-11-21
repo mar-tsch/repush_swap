@@ -6,7 +6,7 @@
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/06 18:15:48 by mtritsch          #+#    #+#              #
-#    Updated: 2022/11/21 18:13:49 by mtritsch         ###   ########.fr        #
+#    Updated: 2022/11/21 18:29:11 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ AR	= ar rcs
 ${NAME} : ${OBJS}
 	@echo "\033[33;01mCompiling...\033[00m"
 	${CC} ${CFLAGS} -c ${SRCS}
-	@echo "\033[32;01mCompilation successful\033[00m"
 	${AR} ${NAME} ${OBJS}
+	@echo "\033[32;01mCompilation successful\033[00m"
 
 all : ${NAME}
 
