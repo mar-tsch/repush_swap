@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:16:39 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/17 14:31:13 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:26:47 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	many_rev_rotates(t_list **stack_a, t_list **stack_b);
 		/*displayers*/
 
 void	display_move(int mvmnt);
-void	error(void);
+void	error_detected(void);
 
 		/*error checkers*/
 

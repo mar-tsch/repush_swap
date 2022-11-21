@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:24:29 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/21 18:02:33 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:31:53 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	{
 		if (del)
 			del(&lst->content);
-		free(lst);
+		del(lst);
 	}
 }

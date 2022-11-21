@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:15:19 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/10/12 19:32:15 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/21 19:26:25 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	arg_not_int(char **av)
 		while (av[x][y])
 		{
 			if ((av[x][y] < 48 || av[x][y] > 57) && av[x][y] != '-')
-				error();
+				error_detected();
 			if (av[x][y] == '-' && (av[x][y + 1] < 48 || av[x][y + 1] > 57))
-				error();
+				error_detected();
 			y++;
 		}
 		x++;
@@ -41,9 +41,9 @@ void	arg_is_int_max(char **av)
 	while (av[x])
 	{
 		if (ft_strlen(av[x]) > 11)
-			error();
+			error_detected();
 		if (ft_atoi(av[x]) > 2147483647 || ft_atoi(av[x]) < -2147483648)
-			error();
+			error_detected();
 		x++;
 	}
 }
@@ -61,7 +61,7 @@ void	arg_twice(char **av)
 		while (av[y])
 		{
 			if (ft_atoi(av[x]) == ft_atoi(av[y]))
-				error();
+				error_detected();
 			y++;
 		}
 		x++;
@@ -71,7 +71,7 @@ void	arg_twice(char **av)
 void	check_args(char **av)
 {
 	if (av[1][0] == '\0')
-		error();
+		error_detected();
 	arg_not_int(av);
 	arg_is_int_max(av);
 	arg_twice(av);

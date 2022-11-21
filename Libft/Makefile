@@ -6,7 +6,7 @@
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/06 18:15:48 by mtritsch          #+#    #+#              #
-#    Updated: 2022/11/21 18:29:11 by mtritsch         ###   ########.fr        #
+#    Updated: 2022/11/21 19:04:52 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ all : ${NAME}
 clean :
 	${RM} ${OBJS}
 
-fclean : clean
-	${RM} ${NAME}
+fclean :
+	${RM} ${OBJS} ${NAME}
 
 re : fclean all

@@ -6,7 +6,7 @@
 #    By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 15:01:22 by mtritsch          #+#    #+#              #
-#    Updated: 2022/11/17 14:34:09 by mtritsch         ###   ########.fr        #
+#    Updated: 2022/11/21 19:03:25 by mtritsch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,8 +41,7 @@ clean :
 	@echo "All cleaned !"
 
 fclean :
-	${RM} ${NAME}
-	${RM} libft.a
+	${RM} ${OBJS} ${NAME}
 	@make fclean -C Libft
 	@echo "All fcleaned ! <3"
 
