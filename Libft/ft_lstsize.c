@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 10:51:50 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/22 15:36:28 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:56:17 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*ptr;
 	int		x;
 
-	ptr = lst;
 	x = 0;
-	while (ptr)
+	while (lst)
 	{
+		lst = lst->next;
 		x++;
-		ptr = ptr->next;
 	}
 	return (x);
 }

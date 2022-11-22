@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:12:17 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/15 18:27:43 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:06:51 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int	ok_stack_a(t_list *tmp_a, t_list *tmp_b)
 	if (tmp_b->content > tmp_a->content
 		&& tmp_b->content < tmp_a->next->content)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 
 int	ok_general(t_list **stack_a, t_list **stack_b, t_list *last)
