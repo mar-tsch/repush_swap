@@ -6,7 +6,7 @@
 /*   By: mtritsch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:53:29 by mtritsch          #+#    #+#             */
-/*   Updated: 2022/11/16 19:28:13 by mtritsch         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:10:59 by mtritsch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ void	best_possible_move(t_list **stack_a, t_list **stack_b)
 void	slide_in_place(t_list **stack_a, t_list **stack_b, t_carac *carac)
 {
 	t_list		*tmp;
-	static int	min_place;
-	static int	mid_place;
+	static int	min_place = 0;
+	static int	mid_place = 0;
 
 	tmp = *stack_a;
 	while (tmp->content != carac->min)
@@ -76,6 +76,7 @@ void	slide_in_place(t_list **stack_a, t_list **stack_b, t_carac *carac)
 		min_place++;
 		tmp = tmp->next;
 	}
+	tmp = *stack_a;
 	while (tmp->content != carac->mid)
 	{
 		mid_place++;
